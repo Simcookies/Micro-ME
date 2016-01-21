@@ -1,0 +1,2 @@
+module MicromeHelper
+end
