@@ -1,15 +1,15 @@
 <% @user ||= current_user %>
-<div class="stats">
-  <a href="<%= following_user_path(@user) %>">
-    <strong id="following" class="stat">
-      <%= @user.following.count %>
-    </strong>
+<div class="stats well">
+  <button class="btn btn-default" onclick='window.location.href="<%= following_user_path(@user) %>"'>
     following
-  </a>
-  <a href="<%= followers_user_path(@user) %>">
-    <strong id="followers" class="stats">
+    <span id="following" class="stat badge">
+      <%= @user.following.count %>
+    </span>
+  </button>
+  <button class="btn btn-default" onclick='window.location.href="<%= followers_user_path(@user) %>"'>    followers
+    <span id="followers" class="stat badge">
       <%= @user.followers.count %>
-    </strong>
-    followers
-  </a>
+    </span>
+  </button>
+  <div class="clearfix"></div>
 </div>
